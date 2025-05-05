@@ -164,16 +164,20 @@ body {
 
 .card-1 {
   background-color: var(--yellow);
-  background-image: url("https://images.unsplash.com/photo-1590845947376-2638caa89309?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-image: url("https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80");
+  /* Chủ đề: teamwork, sáng tạo, bàn tay cùng nhau */
 }
+
 .card-2 {
   background-color: var(--blue);
-  background-image: url("https://images.unsplash.com/photo-1535043205849-513fe27db33e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+  background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80");
+  /* Chủ đề: code, developer, màn hình code */
 }
 
 .card-3 {
   background-color: var(--skyblue);
-  background-image: url("https://images.unsplash.com/photo-1580234797602-22c37b2a6230?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1347&q=80");
+  background-image: url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80");
+  /* Chủ đề: công nghệ, sáng tạo, laptop, workspace */
 }
 
 .cross-1.scroll-end {
@@ -268,4 +272,54 @@ body {
 
 .section--text {
   position: relative;
+}
+
+/* Work Experience Section */
+.section--experience {
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 18px;
+  margin: 3vw auto;
+  max-width: 900px;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.18);
+  padding: 3vw 5vw;
+  color: #fff;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.experience-item h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--skyblue);
+}
+
+.experience-item ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.experience-item ul li {
+  margin-bottom: 0.3rem;
+}
+
+@media screen and (max-width: 900px) {
+  .section--experience {
+    padding: 6vw 2vw;
+    max-width: 98vw;
+  }
+
+  .experience-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-item ul {
+    font-size: 1rem;
+  }
 }
