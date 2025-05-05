@@ -285,10 +285,12 @@ body {
   color: #fff;
 }
 
+.section--freelance {}
+
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  /* gap: 2.5rem; */
 }
 
 .experience-item h3 {
