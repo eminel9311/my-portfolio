@@ -39,21 +39,27 @@ gsap.to(".ring--left", {
 
 gsap.to(".hero__title--1", {
   xPercent: -50,
+  opacity: 0,
   scrollTrigger: {
     trigger: ".hero__title--1",
-    start: "center center",
+    start: "top center",
+    end: "center center",
     pin: true,
-    scrub: 0.5,
+    scrub: 1,
+    ease: "power2.inOut"
   },
 });
 
 gsap.to(".hero__title--2", {
   xPercent: 50,
+  opacity: 0,
   scrollTrigger: {
     trigger: ".hero__title--2",
-    start: "center center",
+    start: "top center",
+    end: "center center",
     pin: true,
-    scrub: 0.5,
+    scrub: 1,
+    ease: "power2.inOut"
   },
 });
 
@@ -128,41 +134,65 @@ gsap.to(".big", {
 });
 
 gsap.to(".cards", {
-  scale: 1.75,
+  scale: 1.2,
+  opacity: 0.95,
+  y: 50,
   scrollTrigger: {
     trigger: ".cards",
-    start: "center center",
-    end: "bottom top",
+    start: "top center",
+    end: "center center",
     pin: true,
-    scrub: true,
+    scrub: 1,
+    ease: "power2.inOut"
   },
 });
 
 gsap.to(".card-1", {
-  rotate: -20,
-  scale: 0.75,
-  x: -200,
+  rotate: -10,
+  scale: 0.9,
+  x: -100,
+  y: 30,
+  opacity: 0.8,
   transformOrigin: "bottom center",
   scrollTrigger: {
     trigger: ".cards",
-    start: "center center",
-    end: "bottom top",
+    start: "top center",
+    end: "center center",
     pin: true,
-    scrub: true,
+    scrub: 1,
+    ease: "power2.inOut"
+  },
+});
+
+gsap.to(".card-2", {
+  scale: 0.95,
+  y: 0,
+  opacity: 0.9,
+  transformOrigin: "center center",
+  scrollTrigger: {
+    trigger: ".cards",
+    start: "top center",
+    end: "center center",
+    pin: true,
+    scrub: 1,
+    ease: "power2.inOut"
   },
 });
 
 gsap.to(".card-3", {
-  rotate: 20,
-  scale: 0.75,
-  x: 200,
+  rotate: 10,
+  scale: 0.9,
+  x: 100,
+  y: 30,
+  opacity: 0.8,
   transformOrigin: "bottom center",
   scrollTrigger: {
     trigger: ".cards",
-    start: "center center",
-    end: "bottom top",
+    start: "top center",
+    end: "center center",
     pin: true,
-    scrub: true,
+    scrub: 1,
+    ease: "power2.inOut"
   },
 });
 
@@ -314,4 +344,38 @@ hoverCursors.forEach(function (cursor) {
       scale: 1,
     });
   });
+});
+
+gsap.from(".works-text", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".works-text",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 1,
+    toggleActions: "play none none reverse"
+  }
+});
+
+let worksText = new SplitText(".works-text", { type: "chars" });
+let worksChars = worksText.chars;
+
+gsap.from(worksChars, {
+  opacity: 0,
+  y: 50,
+  duration: 1.5,
+  stagger: {
+    each: 0.1,
+    ease: "power2.out"
+  },
+  scrollTrigger: {
+    trigger: ".works-text",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 1,
+    toggleActions: "play none none reverse"
+  }
 });
